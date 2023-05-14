@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaxonomyTermController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 // Route::statamic('example', 'example-view', [
 //    'title' => 'Example'
 // ]);
+
+Route::get('/{taxonomy}/{term}', [TaxonomyTermController::class, 'create'])
+        ->where('taxonomy', 'categories')        
+        ->name('taxonomy-term.store');

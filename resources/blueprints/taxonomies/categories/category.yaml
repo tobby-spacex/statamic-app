@@ -11,35 +11,6 @@ tabs:
               required: true
               validate:
                 - required
-      -
-        display: 'Sap Code'
-        fields:
-          -
-            handle: html_field
-            field:
-              html: |-
-                <div class="publish-fields @container">
-                  <form action="/action_page.php">
-                  <div class="form-group publish-field publish-field__sap_code text-fieldtype w-full"><div class="field-inner">
-                	<label for="field_sap_code" class="publish-field-label"><span class="mr-1 v-popper--has-tooltip">Sap code</span><!----><!----><!----><!---->
-                  </label>
-                	</div>
-                <div class="flex items-center"><div class="input-group"><!---->
-                  <input id="field_sap_code" name="sap_code" type="text" class="input-text"><!----></div><!----></div><!----><!----></div><div class="form-group publish-field publish-field__html_field html-fieldtype w-full"><div class="field-inner">
-                  </div>
-                  <div>
-                  </div>
-                  </div>
-                	  <input type="submit" value="Submit">
-                </form>
-                </div>
-              type: html
-              icon: html
-              listable: true
-              instructions_position: above
-              visibility: visible
-              hide_display: false
-              display: 'Sap code send'
   sidebar:
     display: Sidebar
     sections:

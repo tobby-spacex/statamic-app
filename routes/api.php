@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Api\CatalogController;
-use App\Http\Controllers\Api\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
+// To do: Protect routes
 Route::get('/products-by-sap-codes', [CatalogController::class, 'index']);
 Route::get('/products-by-sap-codes/{id}', [CatalogController::class, 'show']);
-Route::post('/products-by-sap-codes', [CatalogController::class, 'store']);
+Route::post('/products-by-sap-codes', [CatalogController::class, 'store'])->name('sap_codes.store');

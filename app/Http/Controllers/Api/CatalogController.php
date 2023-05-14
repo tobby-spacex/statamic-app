@@ -23,18 +23,27 @@ class CatalogController extends Controller
 
     public function store(Request $request)
     {
-        $entry = Entry::make()
-            ->collection('catalog')
-            ->data([
-                'title'     => $request->input('title'),
-                // 'slug'      => $request->input('slug'),
-                'sap_codes'  => $request->input('sap_codes'),
-                'categories' => $request->input('categories'),
-                'published'  => false,
-                'status'     => 'draft'
-            ])
-            ->save();
-
+        $validatedData = $request->validate([
+            'category'  => 'required',
+            'name'      => 'required',
+            'sap_codes' => 'required|array'
+        ]);
+    
+        foreach ($validatedData['sap_codes'] as $sap_code) {
+            if(!empty($sap_code)) {
+                $entry = Entry::make()
+                ->collection('catalog')
+                ->data([
+                    'title'      => $validatedData['name'],
+                    'sap_codes'  => $sap_code,
+                    'categories' => $validatedData['category'],
+                    'published'  => false,
+                    'status'     => 'draft'
+                ])
+                ->save();
+            }
+        }
+    
         return response()->json(['status'=>'success','message'=> $entry]);
     }
 }
