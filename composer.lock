@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "88337a197bd9098ea3816ea068857e9c",
+    "content-hash": "d0d2f56240f0a3e0956798cf3f3ca667",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -1312,16 +1312,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.5.1",
+            "version": "7.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "b964ca597e86b752cd994f27293e9fa6b6a95ed9"
+                "reference": "4019c94f08689e8b67b44800407d52133291dd4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b964ca597e86b752cd994f27293e9fa6b6a95ed9",
-                "reference": "b964ca597e86b752cd994f27293e9fa6b6a95ed9",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/4019c94f08689e8b67b44800407d52133291dd4c",
+                "reference": "4019c94f08689e8b67b44800407d52133291dd4c",
                 "shasum": ""
             },
             "require": {
@@ -1352,9 +1352,6 @@
                 "bamarni-bin": {
                     "bin-links": true,
                     "forward-command": false
-                },
-                "branch-alias": {
-                    "dev-master": "7.5-dev"
                 }
             },
             "autoload": {
@@ -1420,7 +1417,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.5.1"
+                "source": "https://github.com/guzzle/guzzle/tree/7.5.2"
             },
             "funding": [
                 {
@@ -1436,7 +1433,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-17T16:30:08+00:00"
+            "time": "2023-05-14T09:20:02+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -5024,17 +5021,63 @@
             "time": "2022-06-01T11:28:41+00:00"
         },
         {
-            "name": "statamic/cms",
-            "version": "v4.1.0",
+            "name": "statamic/cli",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/statamic/cms.git",
-                "reference": "cc5914c91e9bc3871c53860d14a87930e41a8c84"
+                "url": "https://github.com/statamic/cli.git",
+                "reference": "15af33a4c8d466a0003b9dea744f97139595e6e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/cc5914c91e9bc3871c53860d14a87930e41a8c84",
-                "reference": "cc5914c91e9bc3871c53860d14a87930e41a8c84",
+                "url": "https://api.github.com/repos/statamic/cli/zipball/15af33a4c8d466a0003b9dea744f97139595e6e5",
+                "reference": "15af33a4c8d466a0003b9dea744f97139595e6e5",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.5.5|^7.0.1",
+                "php": ">=7.2.5",
+                "symfony/console": "^4.0|^5.0|^6.0",
+                "symfony/process": "^4.2|^5.0|^6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0"
+            },
+            "bin": [
+                "bin/statamic"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Statamic\\Cli\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Statamic CLI Tool",
+            "keywords": [
+                "statamic"
+            ],
+            "support": {
+                "issues": "https://github.com/statamic/cli/issues",
+                "source": "https://github.com/statamic/cli/tree/2.6.0"
+            },
+            "time": "2023-05-08T20:14:48+00:00"
+        },
+        {
+            "name": "statamic/cms",
+            "version": "v4.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/statamic/cms.git",
+                "reference": "aa94b061cf5986ef236d5f0fa3f6cf1824c5f2f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/aa94b061cf5986ef236d5f0fa3f6cf1824c5f2f9",
+                "reference": "aa94b061cf5986ef236d5f0fa3f6cf1824c5f2f9",
                 "shasum": ""
             },
             "require": {
@@ -5114,7 +5157,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v4.1.0"
+                "source": "https://github.com/statamic/cms/tree/v4.1.1"
             },
             "funding": [
                 {
@@ -5122,7 +5165,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-05-11T16:15:10+00:00"
+            "time": "2023-05-12T15:19:34+00:00"
         },
         {
             "name": "statamic/stringy",
