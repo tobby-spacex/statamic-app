@@ -12,6 +12,17 @@ tabs:
               validate:
                 - required
           -
+            handle: price
+            field:
+              type: integer
+              display: Price
+              icon: integer
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
             handle: sap_codes
             field:
               input_type: text
@@ -22,6 +33,19 @@ tabs:
               listable: hidden
               instructions_position: above
               visibility: visible
+              hide_display: false
+              width: 50
+          -
+            handle: product_url
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Product url'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: read_only
               hide_display: false
   sidebar:
     display: Sidebar

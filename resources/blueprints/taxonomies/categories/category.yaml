@@ -11,6 +11,29 @@ tabs:
               required: true
               validate:
                 - required
+          -
+            handle: sap_codes
+            field:
+              placeholder: 'insert sap-code'
+              type: taggable
+              display: 'Sap Code'
+              icon: tags
+              listable: true
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: products_by_sap_code
+            field:
+              options:
+                get_by_sap_code: 'Get Products'
+              type: button_group
+              display: 'Get Products'
+              icon: button_group
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
   sidebar:
     display: Sidebar
     sections:
