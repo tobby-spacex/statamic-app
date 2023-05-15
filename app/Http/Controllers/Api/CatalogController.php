@@ -26,6 +26,7 @@ class CatalogController extends Controller
         $validatedData = $request->validate([
             '*.title'       => 'required',
             '*.sap_code'    => 'required',
+            '*.category'    => 'required',
             '*.product_url' => 'required',
             '*.price'       => 'required',
         ]);
@@ -38,7 +39,7 @@ class CatalogController extends Controller
                 ->data([
                     'title'       => $product['title'],
                     'sap_codes'   => $product['sap_code'],
-                    'categories'  => $request->input('category'),
+                    'categories'  => $product['category'],
                     'product_url' => $product['product_url'],
                     'price'       => $product['price'],
                     'published'   => false,

@@ -17,7 +17,3 @@ use App\Http\Controllers\TaxonomyTermController;
 // Route::statamic('example', 'example-view', [
 //    'title' => 'Example'
 // ]);
-
-Route::get('/{taxonomy}/{term}', [TaxonomyTermController::class, 'create'])
-        ->where('taxonomy', 'categories')        
-        ->name('taxonomy-term.store');
