@@ -9,11 +9,23 @@ use App\Http\Controllers\Controller;
 
 class CatalogController extends Controller
 {
+    /**
+     * Display a listing of the Collections.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         return Collection::all();
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function show(Request $request, $id)
     {
         $entry = Entry::find($id);
@@ -21,6 +33,12 @@ class CatalogController extends Controller
         return response()->json($entry);
     }
 
+    /**
+     * Store a newly created resource in Collection catalog.
+     * 
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
         $validatedData = $request->validate([

@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
         Statamic::vite('app', [
             // 'resources/js/cp.js',
             // 'resources/css/cp.css',
-            'resources/js/taxonomy/sap_code.js',
+            'resources/js/taxonomy/products_import.js',
         ]);
     }
 }

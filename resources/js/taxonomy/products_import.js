@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const categoryName = document.getElementById('field_title').value;
     const selectedValues = getSelectedValues();
     
+    // TO DO: 'apiUrl' take out into .env file
     const apiUrl = `https://devcatalog.korzinka.uz/api/ctm/products-by-sap-codes?sap_codes[]=${selectedValues.join('&sap_codes[]=')}`;
     try {
       const data = await makeApiRequest(apiUrl);
@@ -17,8 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
         };
       });
 
-      const urli = `http://localhost:8000/api/products-by-sap-codes`;
-      const response = await fetch(urli, {
+      // TO DO: 'routeUrl' take out into .env file
+      const routeUrl = `http://localhost:8000/api/products-by-sap-codes`;
+      const response = await fetch(routeUrl, {
         method: "POST", 
         headers: {
           "Content-Type": "application/json",
