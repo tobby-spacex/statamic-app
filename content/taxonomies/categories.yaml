@@ -1,0 +1,5 @@
+title: Categories
+route: "/categories/{slug}"
+fieldset: taxonomy.categories
+template: taxonomy
+terms: true

@@ -18,9 +18,9 @@ return [
     'enabled' => env('STATAMIC_API_ENABLED', false),
 
     'resources' => [
-        'collections' => false,
+        'collections' => true,
         'navs' => false,
-        'taxonomies' => false,
+        'taxonomies' => true,
         'assets' => false,
         'globals' => false,
         'forms' => false,
